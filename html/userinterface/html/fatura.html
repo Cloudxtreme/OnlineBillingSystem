@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Billing System</title>
+	<meta charset='UTF-8'>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/faturaScript.js"></script>
+</head>
+<body>
+
+	<h1>Invoices</h1>
+
+	<div class="masterwrapper">
+
+	<div class="logged"><button type="button" value="logout">Log Out</button></div>
+
+	<div class="wrapper">
+		<div class="fatura"><a href="fatura.html"><button type="button" value="invoices">Invoices</button></a></div>
+		<div class="produto"><a href="produto.html"><button type="button" value="products">Products</button></a></div>
+		<div class="cliente"><a href="cliente.html"><button type="button" value="clients">Clients</button></a></div>
+		<div class="permissao"><a href="permissao.html"><button type="button" value="permissions">Permissions</button></a></div>
+	</div>
+
+	<div class="search">
+		<p><b>Search:</b></p>
+	
+	<table border="0">
+	<tr>
+	<td>Op:</td>
+	<td>
+		<select class="op">
+		  <option value="range">Range</option>
+		  <option value="equal">Equal</option>
+		  <option value="contains">Contains</option>
+		  <option value="min">Min</option>
+		  <option value="max">Max</option>
+		</select>
+	</td>
+	<td>Field:</td>
+	<td>
+		<select class="field">
+		  <option value="InvoiceNo">Invoice Number</option>
+		  <option value="InvoiceDate">Invoice Date</option>
+		  <option value="CustomerID">Customer ID</option>
+		</select>
+	</td>
+	<td>Value:</td>
+	<td><input class="value" type="text"/></td>
+	<td class="secvalue"><input class="secvalue" type="text"/></td>
+	<td><button class="search">Search</button></td>
+	<td><a href="createInvoice.html"><button class="create">Create</button></a></td>
+	</tr>
+	</table>
+	</div>
+
+	<div class="numeroDeResultados"></div>
+	<div class="resultados"></div>
+
+	<form id="form" method="POST">
+	<table class="formTable">
+		<tr>
+		<td>InvoiceNo: </td>
+		<td><input class="InvoiceNo" type="text" name="InvoiceNo" readonly value=""/></td>
+		</tr>
+		<tr>
+		<td>InvoiceDate: </td>
+		<td><input class="InvoiceDate" type="text" name="InvoiceDate" value=""/></td>
+		</tr>
+		<tr class="stayHidden">
+		<td>CustomerID: </td>
+		<td><input class="CustomerID" type="text" name="CustomerID" value=""/></td>
+		</tr>
+		<tr>
+		<td>Company Name: </td>
+		<td><input class="CompanyName" type="text" name="CompanyName" value=""/></td>
+		</tr class="addLine">
+		<tr>
+		<td colspan="2"><input class="submit" type="submit" name="form" value="Submit"></td>
+		</tr>
+	</table>
+	</form>
+
+	<script type="text/javascript">
+
+	$( document ).ready(function() {
+
+		var $op = $("select.op");
+		var $show = false;
+     
+		if($show == false){
+			$(".forms").hide();
+		}
+
+		$(".stayHidden").hide();
+
+		function setSecValueVisibility(){
+
+			if($(this).val() == "range"){
+         		$(".secvalue").show();
+         	}
+         	else{
+         		$(".secvalue").hide();
+         	}
+		}
+
+		setSecValueVisibility.apply($op);
+
+    	$("select.op").change(function(){
+         	setSecValueVisibility.apply($op);
+         	
+	    });
+
+    	function showForms(){
+    		$(".forms").show();
+    		$show = true;
+    	}
+
+    	$("tr.clickable").click(function(){
+    		showForms();
+    	});
+
+	});
+
+	</script>
+	</div>
+</body>
+</html>

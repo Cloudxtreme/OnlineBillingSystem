@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Print mode</title>
+	<meta charset='UTF-8'>
+	<link rel="stylesheet" href="facdoc.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/expandScript.js"></script>
+</head>
+<body>
+
+	<h1>Invoice</h1>
+
+	<div class="fatura">
+
+		<table border="1" cellpadding="0" align="left">
+		<tr>
+		<td>
+			<b class="date">Date: </b>
+		</td>
+		<td>
+			<b class="companyName">Company Name: </b>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<b class="clientID">Client ID: </b>
+		</td>
+		<td>
+			<b class="address">Adress Detail: </b>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<b class="clientTaxID">Client Tax ID: </b>
+		</td>
+		<td>
+			<b class="postalCode">Postal Code: </b>
+		</td>
+		</tr>
+		<tr>
+		<td>
+			<b class="email">E-mail: </b>
+		</td>
+		<td>
+			<b class="country">Country: </b>
+		</td>
+		</table>
+
+	</div>
+
+	<div class="resumoh">
+
+		<table border="1" cellpadding="5">
+		<tr>
+		<th><b>Invoice Number: </b><div class="invoiceNo"></div></th>
+		</tr>
+		<tr>
+		<th><b>Invoice Summary</b></th>
+		</tr>
+		</table>
+
+	</div>	
+
+	<div class="resumo">
+
+
+		<table id="list" border="1" cellpadding="5">
+		<tr>
+		<td><b>Line Number</b></td>
+		<td><b>Product Code</b></td>
+		<td><b>Quantity</b></td>
+		<td><b>Unit Price</b></td>
+		<td><b>Credit Amount</b></td>
+		<td><b>Tax Type</b></td>
+		<td><b>Tax %</b></td>
+		</tr>
+		</table >
+
+	</div>
+
+	<div class="documentsTotal">
+
+		<table border="1" cellpadding="5">
+		<tr>
+		<th><b>Account Extract</b></th>
+		</tr>
+		<tr>
+		<th><b>Tax Payable:</b><div class="taxPay">&euro;</div><br>
+			<b>Net Total:  </b><div class="netTotal">&euro;</div>
+		</th>
+		</tr>
+		<tr>
+		<th><b>Total:</b><div class="totalPay">&euro;</div></th>
+		</tr>
+		</table>
+
+	</div>
+</body>
+</html>

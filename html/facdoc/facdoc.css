@@ -1,0 +1,59 @@
+body, table, h1 { 
+background-color: #f3f3f3;
+font-family: tahoma;
+margin: 0 0 0 0;
+}
+
+h1 { 
+background-color: white;
+padding: 100px 0 10px 100px;
+}
+
+table { 
+border-collapse: collapse;
+}
+
+th, div.fatura tr{
+  text-align: left;
+}
+
+tr, div.clientID{
+  text-align: center;
+}
+
+div.fatura table{
+  margin-bottom: 20px;
+}
+
+div.fatura, div.resumoh, div.documentsTotal, div.resumo{
+  background-color: #f3f3f3;
+  font-family: tahoma;
+  margin:0 100px 0 100px;
+  page-break-after: auto; 
+}
+
+div.fatura, div.resumoh, div.documentsTotal{
+  padding-top:10px;
+}
+
+div.documentsTotal{
+  margin-bottom: 20px;
+}
+
+div.resumoh{
+  margin-bottom: 3px;
+}
+
+div.resumo{
+  padding:0 0 0 0;
+}
+
+div.taxPay, div.netTotal, div.totalPay, div.invoiceNo{
+  text-align: right;
+}
+
+div.resumoh table, div.resumo table, div.documentsTotal table, div.fatura table{ 
+width:100%;
+background-color: #f3f3f3;
+font-family: tahoma;
+}

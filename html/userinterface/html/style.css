@@ -1,0 +1,145 @@
+html{
+background-color: #D8D8D8;
+}
+
+input, select, .search button{
+border: 1px solid #585858;
+border-radius: 4px;
+}
+
+input:focus, select:focus, .search button:focus{
+outline: none;
+border-color: #9ecaed;
+box-shadow: 0 0 10px #9ecaed;
+}
+
+h1 { 
+background: linear-gradient(#FFFFFF , #E8E8E8 );
+font-size: 50px;
+padding: 100px 0 10px 5%;
+}
+
+a{
+text-decoration: none;
+color: black;
+}
+
+.wrapper{
+margin: 0 5% 0 5%;
+padding-top: 10px;
+height: 100px;
+}
+
+.masterwrapper{
+background: linear-gradient(#E8E8E8, #D8D8D8);
+}
+
+.fatura, .produto, .cliente, .permissao, .off{
+float:left;
+transition: all .5s linear 0;
+width:25%; 
+height:70px;
+opacity:0.4; 
+text-align: center;
+}
+
+.fatura button, .produto button, .cliente button, .permissao button, .off button{
+width: 95%;
+height: 100%;
+font-size: 30px;
+font-weight:bold;
+border-radius: 20px;
+border-width: 4px;
+border-color: black;
+box-shadow: 0px 5px 3px 1px #999
+}
+
+.fatura button, .produto button, .cliente button, .permissao button, div.resultados tr.clickable:hover{
+cursor: pointer;	
+}
+
+.fatura:hover, .produto:hover, .cliente:hover, .permissao:hover
+{
+opacity:1.0;
+height: 80px;
+}
+
+.fatura button{
+background: linear-gradient(#FF9900, #FF0000);
+}
+
+.produto button{
+background: linear-gradient(#00FFCC, #0066CC);
+}
+
+.cliente button{
+background: linear-gradient(#00FF00, #009900);
+}
+
+.permissao button{
+background: linear-gradient(#FFFF99, #FFFF00);
+}
+
+.off button{
+background: linear-gradient(#C0C0C0, #707070);
+color:#686868;
+}
+
+.search{
+clear:both;
+width:100%;
+}
+
+body, p, table, h1{
+font-family: tahoma;
+}
+
+p { 
+margin:0 100px 0 100px;
+padding: 10px 0 0 0 ;
+}
+
+.search table, table, .logged{ 
+margin:0 0 0 5%;
+padding:0 0 0 0;
+}
+
+body, h1{ 
+margin: 0 0 0 0;
+}
+
+.resultados table, .resultados tr.clickable{
+text-align: center;
+}
+
+.resultados tr.clickable{
+opacity:1.0;
+}
+
+.resultados tr.clickable:hover
+{
+background-color: #9ecaed;
+}
+
+.resultados table, table.formTable{
+border-collapse:collapse;
+border: 4px solid #585858;
+float: left;	
+width: auto;
+}
+
+table.formTable{
+margin: 0 5% 0 50px;
+}
+
+table.formTable td{
+border: 0px;		
+}
+
+.resultados td{
+border: 1px solid #585858;	
+}
+
+.BillingAdressPostalCode1, .BillingAdressPostalCode2{
+width:20%;
+}

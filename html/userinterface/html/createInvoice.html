@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Invoice Creation Menu</title>
+	<meta charset='UTF-8'>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../../scripts/Script.js"></script>
+</head>
+<body>
+
+	<h1>Online Billing System</h1>
+
+	<div class="masterwrapper">
+
+	<div class="logged"><button type="button" value="logout">Log Out</button></div>
+
+	<div class="wrapper">
+		<div class="fatura"><a href="fatura.html"><button type="button" value="invoices">Invoices</button></a></div>
+		<div class="produto"><a href="produto.html"><button type="button" value="products">Products</button></a></div>
+		<div class="cliente"><a href="cliente.html"><button type="button" value="clients">Clients</button></a></div>
+		<div class="permissao"><a href="permissao.html"><button type="button" value="permissions">Permissions</button></a></div>
+	</div>
+
+	<div class="search">
+	<form id="invoiceCreation" method="POST">
+	<table>
+		<tr>
+		<td>Invoice No: </td>
+		<td><input class="InvoiceNo" type="text" name="InvoiceNo" readonly value=""/></td>
+		<td>Invoice Date: </td>
+		<td><input class="InvoiceDate" type="text" name="InvoiceDate" value=""/></td>
+		<td>Company Name: </td>
+		<td><input class="CompanyName" type="text" name="CompanyName" value=""/></td>
+		<td><button class="addH" type="button" name="add" value="Add">Add</button></td>
+		</tr>
+		<tr class="stayHidden">
+		<td>Customer ID: </td>
+		<td><input class="CustomerID" type="text" name="CustomerID" value=""/></td>
+		</tr>
+		<tr>
+		<td>Product Code: </td>
+		<td><input class="ProductCode" type="text" name="ProductCode" value=""/></td>
+		<td>Quantity: </td>
+		<td><input class="Quantity" type="text" name="Quantity" value=""/></td>
+		<td>Unit Price: </td>
+		<td><input class="UnitPrice" type="text" name="UnitPrice" value=""/></td>
+		<td>Tax Type: </td>
+		<td>
+			<select class="TaxType">
+				<option value="type1">IVA</option>
+			</select>
+		</td>
+		<td>Tax Percentage: </td>
+		<td>
+			<select class="TaxPercentage">
+				<option value="6iva">6%</option>
+				<option value="13iva">13%</option>
+				<option value="23iva">23%</option>
+			</select>
+		</td>
+		<td><button class="addL" type="button" name="add" value="Add">Add</button></td>
+		</tr>
+		</tr>
+		<tr>
+		<td colspan="2"><input class="submit" type="submit" name="form" value="Submit"></td>
+		</tr>
+	</table>
+	</form>	
+	</div>
+
+	<script type="text/javascript">
+
+	$( document ).ready(function() {
+
+		$(".stayHidden").hide();
+	});
+	</script>
+	</div>
+</body>
+</html>
